@@ -1,0 +1,165 @@
+du côn.png
+size:1988,444
+filter:Linear,Linear
+pma:true
+scale:0.8
+Ef/Comp 1_00000
+bounds:1920,132,45,33
+offsets:95,88,240,200
+rotate:90
+Ef/Comp 1_00002
+bounds:1840,113,78,70
+offsets:78,70,240,200
+Ef/Comp 1_00003
+bounds:1609,86,102,94
+offsets:62,56,240,200
+rotate:90
+Ef/Comp 1_00005
+bounds:1848,323,136,119
+offsets:53,48,240,200
+Ef/Comp 1_00006
+bounds:208,22,136,119
+offsets:53,48,240,200
+rotate:90
+Ef/Comp 1_00007
+bounds:1302,189,152,122
+offsets:47,46,240,200
+Ef/Comp 1_00009
+bounds:1675,313,171,129
+offsets:39,43,240,200
+Ef/Comp 1_00010
+bounds:1114,313,188,129
+offsets:25,43,240,200
+Ef/Comp 1_00011
+bounds:1304,313,188,129
+offsets:25,43,240,200
+Ef/Comp 1_00013
+bounds:2,28,204,130
+offsets:13,42,240,200
+Ef/Comp 1_00014
+bounds:1494,312,179,130
+offsets:8,42,240,200
+Ef/Comp 1_00017
+bounds:950,169,186,106
+offsets:2,45,240,200
+Ef/Comp 1_00020
+bounds:968,4,145,101
+offsets:50,49,240,200
+Ef/Comp 1_00023
+bounds:672,85,149,104
+offsets:50,47,240,200
+Ef/Comp 1_00024
+bounds:1458,92,149,104
+offsets:51,46,240,200
+Ef/Comp 1_00026
+bounds:521,84,149,105
+offsets:53,44,240,200
+Ef/Comp 1_00033
+bounds:1456,198,160,112
+offsets:52,40,240,200
+Group 2
+bounds:950,277,162,165
+Layer 113
+bounds:521,2,80,150
+rotate:90
+Layer 1203
+bounds:837,2,90,129
+rotate:90
+Layer 1210
+bounds:1823,47,74,34
+Layer 1222 copy 3
+bounds:1245,2,90,58
+rotate:90
+Layer 1240
+bounds:1618,190,87,120
+Layer 1243
+bounds:1705,85,133,98
+Layer 1358
+bounds:1607,25,59,83
+rotate:90
+Layer 1361
+bounds:1302,125,154,62
+offsets:0,1,154,64
+chan phai
+bounds:673,17,66,162
+rotate:90
+chan trai
+bounds:1119,94,66,160
+rotate:90
+dang 3
+bounds:2,160,273,282
+offsets:0,0,278,282
+dau 2
+bounds:277,189,170,253
+dauu
+bounds:620,191,164,251
+long may
+bounds:1840,83,75,28
+offsets:0,1,76,30
+m1
+bounds:449,191,169,251
+m2
+bounds:786,192,162,250
+mat
+bounds:1692,2,81,54
+offsets:0,0,82,55
+rotate:90
+mat 2
+bounds:823,90,7,8
+mat trong
+bounds:673,4,57,11
+may 2
+bounds:1114,285,26,22
+rotate:90
+mieng 2
+bounds:277,162,42,25
+offsets:1,0,43,25
+muii
+bounds:121,2,22,24
+măt 22
+bounds:1823,2,43,46
+offsets:1,0,44,46
+rotate:90
+nv chinhs/Layer 1243
+bounds:1115,2,90,128
+rotate:90
+nv chinhs/Layer 1247
+bounds:823,100,90,124
+rotate:90
+nv chinhs/Layer 1346
+bounds:2,9,117,17
+nv chinhs/Layer 1348
+bounds:1848,309,138,12
+nv chinhs/Layer 1353
+bounds:1390,22,101,66
+rotate:90
+nv chinhs/Layer 1355
+bounds:1948,201,106,20
+rotate:90
+nv chinhs/mat
+bounds:1921,179,128,25
+rotate:90
+nv chinhs/mui
+bounds:1138,162,162,149
+nv chinhs/quan sau
+bounds:429,16,90,171
+nv chinhs/quan trc
+bounds:949,107,60,168
+rotate:90
+nv chinhs/quan {}
+bounds:1748,34,73,49
+offsets:0,0,74,49
+nv chinhs/than
+bounds:1836,185,83,122
+nv chinhs/toc copy
+bounds:1458,27,147,63
+quan sau
+bounds:1707,185,126,127
+rotate:90
+quan trc
+bounds:329,19,168,98
+rotate:90
+than
+bounds:1305,2,121,83
+offsets:0,0,122,83
+rotate:90
