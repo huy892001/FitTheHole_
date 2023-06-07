@@ -13,11 +13,11 @@ public class ButtonChooseLevel : MonoBehaviour
 
         if (PlayerPrefs.HasKey("Playable Level"))
         {
-            if(int.Parse(textOfLevelNumber.text) <= PlayerPrefs.GetInt("Level"))
+            if(int.Parse(textOfLevelNumber.text) <= PlayerPrefs.GetInt("Playable Level"))
             {
                 gameObject.transform.GetComponent<Button>().interactable = true;
             }
-            else if(int.Parse(textOfLevelNumber.text) > PlayerPrefs.GetInt("Level"))
+            else if(int.Parse(textOfLevelNumber.text) > PlayerPrefs.GetInt("Playable Level"))
             {
                 gameObject.transform.GetComponent<Button>().interactable = false;
             }

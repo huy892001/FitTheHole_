@@ -868,6 +868,7 @@ GameObject:
   - component: {fileID: 506157862}
   - component: {fileID: 506157861}
   - component: {fileID: 506157863}
+  - component: {fileID: 506157864}
   m_Layer: 5
   m_Name: Level 2
   m_TagString: Untagged
@@ -977,7 +978,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 506157861}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 506157864}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &506157864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506157859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1245048}
 --- !u!1 &520566035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,7 +1442,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 770275204}
   m_OnClick:
     m_PersistentCalls:
@@ -1746,6 +1772,7 @@ GameObject:
   - component: {fileID: 830655250}
   - component: {fileID: 830655249}
   - component: {fileID: 830655251}
+  - component: {fileID: 830655252}
   m_Layer: 5
   m_Name: Level 5
   m_TagString: Untagged
@@ -1855,7 +1882,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 830655249}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 830655252}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &830655252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830655247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1419388524}
 --- !u!1 &877026266
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,6 +2967,7 @@ GameObject:
   - component: {fileID: 1096630079}
   - component: {fileID: 1096630078}
   - component: {fileID: 1096630080}
+  - component: {fileID: 1096630081}
   m_Layer: 5
   m_Name: Level 6
   m_TagString: Untagged
@@ -3024,7 +3077,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1096630078}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1096630081}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1096630081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096630076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1334061871}
 --- !u!1 &1151578282
 GameObject:
   m_ObjectHideFlags: 0
@@ -4004,6 +4082,7 @@ GameObject:
   - component: {fileID: 1386549752}
   - component: {fileID: 1386549751}
   - component: {fileID: 1386549753}
+  - component: {fileID: 1386549754}
   m_Layer: 5
   m_Name: Level 1
   m_TagString: Untagged
@@ -4113,7 +4192,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1386549751}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1386549754}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1386549754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386549749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1666336325}
 --- !u!1 &1416285479
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,6 +4442,7 @@ GameObject:
   - component: {fileID: 1433179460}
   - component: {fileID: 1433179459}
   - component: {fileID: 1433179461}
+  - component: {fileID: 1433179462}
   m_Layer: 5
   m_Name: Level 3
   m_TagString: Untagged
@@ -4447,7 +4552,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1433179459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1433179462}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1433179462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433179457}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1913774785}
 --- !u!1 &1463440516
 GameObject:
   m_ObjectHideFlags: 0
@@ -7360,6 +7490,7 @@ GameObject:
   - component: {fileID: 2000499527}
   - component: {fileID: 2000499526}
   - component: {fileID: 2000499528}
+  - component: {fileID: 2000499529}
   m_Layer: 5
   m_Name: Level 4
   m_TagString: Untagged
@@ -7469,7 +7600,32 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2000499526}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2000499529}
+        m_TargetAssemblyTypeName: ButtonChooseLevel, Assembly-CSharp
+        m_MethodName: HandlerChooseLevelFowardSceneGameplay
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2000499529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000499524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e06fe24d03382814a813b116296ba098, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textOfLevelNumber: {fileID: 1605452627}
 --- !u!1 &2007777907
 GameObject:
   m_ObjectHideFlags: 0

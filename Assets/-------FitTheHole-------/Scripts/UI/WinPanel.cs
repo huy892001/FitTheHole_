@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WinPanel : MonoBehaviour
 {
-    [SerializeField] private GameObject iconChapter;
+    [SerializeField] private GameObject iconChapter, backgroundImageOfCompleteChapter;
     private void OnEnable()
     {
         PlayerPrefs.SetInt("Playable Level",(PlayerPrefs.GetInt("Playable Level") +1));
@@ -30,6 +30,9 @@ public class WinPanel : MonoBehaviour
                                 {
                                     PlayerPrefs.SetInt("Index Anim Icon Chapter", 1);
                                     PlayerPrefs.SetInt("Playable Chapter", PlayerPrefs.GetInt("Playable Chapter") + 1);
+                                    float time = iconChapter.transform.GetChild(0).GetComponent<Animation>().GetClip("AnimationIconBackground6").length;
+                                    StartCoroutine(WaitForSecondsActiveCompleteChapter(time));
+                                    backgroundImageOfCompleteChapter.transform.GetChild(1).gameObject.GetComponent<Image>().sprite = backgroundChapter.backgroundImageChapter;
                                 }
                                 else
                                 {
@@ -63,5 +66,12 @@ public class WinPanel : MonoBehaviour
         yield return new WaitForSeconds(time);
         gameObject.transform.GetChild(2).gameObject.SetActive(true);
         gameObject.transform.GetChild(3).gameObject.SetActive(true);
+    }
+
+    private IEnumerator WaitForSecondsActiveCompleteChapter(float time)
+    {
+        yield return new WaitForSeconds(time);
+        gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        backgroundImageOfCompleteChapter.SetActive(true);
     }
 }
