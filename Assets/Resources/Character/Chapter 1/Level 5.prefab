@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 859329051084183989}
   - component: {fileID: 859329051084183991}
-  - component: {fileID: 859329051084183990}
   m_Layer: 0
   m_Name: Shape
   m_TagString: Untagged
@@ -110,14 +109,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 859329051084183988}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -214.66, y: -156.71, z: 1.2439426}
+  m_LocalPosition: {x: 2.2576904, y: 6.3671265, z: -0.066911936}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 859329051858821456}
   - {fileID: 859329051752306337}
-  m_Father: {fileID: 859329052555063901}
-  m_RootOrder: 2
+  m_Father: {fileID: 6973572054238630442}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &859329051084183991
 SpriteRenderer:
@@ -171,18 +170,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &859329051084183990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 859329051084183988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15705654b530d0243980b87c44af6ce8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &859329051216169989
 GameObject:
   m_ObjectHideFlags: 0
@@ -387,7 +374,7 @@ Transform:
   - {fileID: 859329052225222535}
   - {fileID: 859329051752251416}
   m_Father: {fileID: 859329052555063901}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &859329051618948600
 MonoBehaviour:
@@ -503,7 +490,7 @@ Transform:
   - {fileID: 4689412413375648830}
   - {fileID: 56792555693264183}
   m_Father: {fileID: 859329052555063901}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &859329051752251431
 GameObject:
@@ -1201,9 +1188,9 @@ Transform:
   m_Children:
   - {fileID: 859329052722030306}
   - {fileID: 859329052057162607}
-  - {fileID: 859329051084183989}
   - {fileID: 859329051649192339}
   - {fileID: 859329051618948484}
+  - {fileID: 6973572054238630442}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1291,6 +1278,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1851676836126209268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6973572054238630442}
+  - component: {fileID: 1455082640137780808}
+  m_Layer: 0
+  m_Name: ListOfShapeCharacter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6973572054238630442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851676836126209268}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -216.9177, y: -163.07713, z: 1.3108546}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 859329051084183989}
+  m_Father: {fileID: 859329052555063901}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455082640137780808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851676836126209268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15705654b530d0243980b87c44af6ce8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfShapeCharacter:
+  - Icon: {fileID: 2800000, guid: 6b5d4a9061e815847b45248719b04dad, type: 3}
+    nameOfCharacter: Boxing
+    shapeOfCharacter: {fileID: 859329051752306336}
+  - Icon: {fileID: 2800000, guid: f4eef6bb3a81a3644a2201cfe8bb8974, type: 3}
+    nameOfCharacter: Troll
+    shapeOfCharacter: {fileID: 859329051858821471}
 --- !u!1001 &859329050802987011
 PrefabInstance:
   m_ObjectHideFlags: 0

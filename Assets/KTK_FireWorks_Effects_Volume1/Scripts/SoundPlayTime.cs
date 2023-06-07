@@ -11,7 +11,7 @@ public class SoundPlayTime : MonoBehaviour {
 	public float loopWaitTime = 0.0f;
 	private bool flag = false;
 	public  AudioClip sound01;
-	private AudioSource audioSource;
+	public AudioSource audioSource;
 	
 
 	void Start  () {

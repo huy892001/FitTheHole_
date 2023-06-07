@@ -343,10 +343,11 @@ public class HandlerAnimationInGameplay
     {
         float indexPos = UnityEngine.Random.Range(0, 3);
         Vector3 pos = new Vector3(indexPos, characterManager.transform.position.y + 3, 0);
-        SoundManager.Instance.PlaySoundTextPraise();
         objectOfTextPraiseUI.transform.position = pos;
         int index = UnityEngine.Random.Range(0, 5);
+        SoundManager.Instance.indexOfAudioTextPraise = index;
         objectOfTextPraiseUI.transform.GetChild(index).gameObject.SetActive(true);
         objectOfTextPraiseUI.transform.GetChild(index).gameObject.GetComponent<UnityEngine.Animation>().Play();
+        SoundManager.Instance.PlaySoundTextPraise();
     }
 }

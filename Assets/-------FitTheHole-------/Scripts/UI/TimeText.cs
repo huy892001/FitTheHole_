@@ -7,7 +7,7 @@ using TMPro;
 
 public class TimeText : MonoBehaviour
 {
-    private float timeLeftToPlay = 21;
+    private float timeLeftToPlay = 31;
     private TimeSpan time;
     [SerializeField] private TMP_Text timeRemainingText, textLevelNumber;
     private void Start()

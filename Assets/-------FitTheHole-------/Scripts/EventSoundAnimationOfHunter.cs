@@ -6,13 +6,6 @@ using UnityEngine;
 
 public class EventSoundAnimationOfHunter : MonoBehaviour
 {
-
-    [SerializeField] private AudioSource audioSourceOfHunter;
-    [SerializeField]
-    private AudioClip audioClipAnimationRunning,
-                                       audioClipAnimationHit,
-                                       audioClipWinPanel,
-                                       audioClipLosePanel;
     void Start()
     {
         GameManager.Instance.animationOfHuntCharacter.AnimationState.Start += HandleEventStart;
@@ -26,7 +19,7 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
     {
         if (trackEntry.Animation.Name == "Win" || trackEntry.Animation.Name == "Lose")
         {
-            audioSourceOfHunter.PlayOneShot(audioClipAnimationRunning);
+            SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipAnimationRunning);
         }
     }
 
@@ -34,14 +27,14 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
     {
         if (e.Data.Name == "dung" && (trackEntry.Animation.Name == "Win" || trackEntry.Animation.Name == "Lose"))
         {
-            audioSourceOfHunter.Stop();
+            SoundManager.Instance.audioSound.Stop();
         }
     }
     void HandleEventRun(TrackEntry trackEntry, Spine.Event e)
     {
         if (e.Data.Name == "di" && (trackEntry.Animation.Name == "Win" || trackEntry.Animation.Name == "Lose"))
         {
-            audioSourceOfHunter.PlayOneShot(audioClipAnimationRunning);
+            SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipAnimationRunning);
         }
     }
 
@@ -49,7 +42,7 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
     {
         if (e.Data.Name == "dap" && (trackEntry.Animation.Name == "Lose"))
         {
-            audioSourceOfHunter.PlayOneShot(audioClipAnimationHit);
+            SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipAnimationHit);
         }
     }
 
@@ -57,12 +50,12 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
     {
         if (trackEntry.Animation.Name == "Win")
         {
-            audioSourceOfHunter.PlayOneShot(audioClipWinPanel);
+            SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipWinPanel);
             GameManager.Instance.WinPanel.SetActive(true);
         }
         else if (trackEntry.Animation.Name == "Lose")
         {
-            audioSourceOfHunter.PlayOneShot(audioClipLosePanel);
+            SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipLosePanel);
             GameManager.Instance.LosePanel.SetActive(true);
         }
     }

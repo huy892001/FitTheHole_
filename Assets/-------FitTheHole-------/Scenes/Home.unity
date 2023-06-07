@@ -3026,9 +3026,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSound: {fileID: 2015325530}
+  indexOfAudioTextPraise: 0
+  audioSoundTextPraise: []
   audioClipOfButton: {fileID: 8300000, guid: fda68a6f584f56e438b80f332b000b82, type: 3}
   audioSoundStateChangeCharacter: {fileID: 0}
-  audioSoundTextPraise: {fileID: 0}
+  audioClipAnimationRunning: {fileID: 0}
+  audioClipAnimationHit: {fileID: 0}
+  audioClipWinPanel: {fileID: 0}
+  audioClipLosePanel: {fileID: 0}
+  audioOfFirewordsEffectShot: {fileID: 0}
+  audioOfFirewordsEffectBurst: {fileID: 0}
 --- !u!82 &2015325530
 AudioSource:
   m_ObjectHideFlags: 0

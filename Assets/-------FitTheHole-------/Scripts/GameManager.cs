@@ -13,15 +13,18 @@ public class GameManager : Singleton<GameManager>
     public static event Action<GameState> OnGamestateChanged;
     private void Start()
     {
-        if (PlayerPrefs.HasKey("Chapter"))
+        if (PlayerPrefs.HasKey("Hunter"))
         {
             Instantiate(Resources.Load<GameObject>("Character/Chapter " + PlayerPrefs.GetInt("Chapter") + "/Level " + PlayerPrefs.GetInt("Level")));
-            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Chapter " + PlayerPrefs.GetInt("Chapter")));
+            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter " + PlayerPrefs.GetInt("Hunter")));
         }
         else
         {
             Instantiate(Resources.Load<GameObject>("Character/Chapter 1/Level 1"));
-            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Chapter 1"));
+            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter 1"));
+            PlayerPrefs.SetInt("Chapter", 1);
+            PlayerPrefs.SetInt("Level", 1);
+            PlayerPrefs.SetInt("Hunter", 1);
         }
         animationOfHuntCharacter.transform.position = new Vector3(-3,-6,1);
         UpdateState(GameState.Start);
