@@ -278,6 +278,7 @@ public class CharacterStateComplete : FactoryState
     }
     public void Start()
     {
+        TextGuidHand.Instance.textMoveToFitIt.SetActive(false);
         if (!checkAnimation)
         {
             _anim.PlayAnimationTextPraise();

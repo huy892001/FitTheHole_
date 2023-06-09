@@ -18,7 +18,7 @@ public class ShapeExact : MonoBehaviour
                     {
                         if (child.gameObject == item)
                         {
-                            if (Vector3.Distance(other.transform.position, transform.position) < 0.2f)
+                            if (Vector3.Distance(other.transform.position, transform.position) < 0.4f)
                             {
                                 var character = other.transform.GetComponent<Factory>();
                                 character.ChangeState(CharacterState.Complete);

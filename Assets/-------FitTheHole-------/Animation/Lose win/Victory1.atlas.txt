@@ -1,0 +1,65 @@
+Victory1.png
+size:1584,296
+filter:Linear,Linear
+pma:true
+scale:0.8
+Group 231 copy 2
+bounds:346,2,152,114
+Layer 28
+bounds:500,2,114,74
+rotate:90
+Layer 28 copy
+bounds:804,16,122,44
+offsets:0,0,123,44
+rotate:90
+Layer 28 copy 3
+bounds:1494,46,85,107
+offsets:1,0,86,107
+Layer 34
+bounds:498,118,176,162
+rotate:90
+Layer 34 copy
+bounds:662,140,154,91
+offsets:0,0,155,91
+rotate:90
+Layer 34 copy 2
+bounds:334,118,176,162
+rotate:90
+Layer 35
+bounds:850,4,508,139
+Layer 48
+bounds:652,4,150,112
+Layer 50 copy 6
+bounds:2,10,93,170
+rotate:90
+Layer 50 copy 7
+bounds:174,10,93,170
+rotate:90
+Layer 57
+bounds:1066,155,508,139
+eet4t
+bounds:576,2,114,74
+rotate:90
+egwerg
+bounds:2,105,189,164
+rotate:90
+erfqwefr
+bounds:168,105,189,164
+rotate:90
+ewrqwer
+bounds:848,145,149,107
+rotate:90
+jhkuyk
+bounds:755,140,154,91
+offsets:1,0,155,91
+rotate:90
+sfwqf
+bounds:1360,31,122,44
+offsets:1,0,123,44
+rotate:90
+wqw
+bounds:1406,46,86,107
+wretwretg
+bounds:957,145,149,107
+offsets:0,0,149,108
+rotate:90

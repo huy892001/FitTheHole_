@@ -9,7 +9,11 @@ public class DontDestroy : MonoBehaviour
 
     void Awake()
     {
-
+        if (!PlayerPrefs.HasKey("Playable Chapter"))
+        {
+            PlayerPrefs.SetInt("Playable Chapter", 1);
+            PlayerPrefs.SetInt("Index Anim Icon Chapter", 1);
+        }
         if (instance == null)
         {
             instance = this;

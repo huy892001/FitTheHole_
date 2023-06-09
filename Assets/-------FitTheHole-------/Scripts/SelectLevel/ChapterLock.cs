@@ -7,15 +7,13 @@ public class ChapterLock : MonoBehaviour
     [SerializeField] private int chapterNumber;
     void Start()
     {
-        if (!PlayerPrefs.HasKey("Playable Chapter"))
+        if (!PlayerPrefs.HasKey("Unlock Chapter " + chapterNumber))
         {
-            PlayerPrefs.SetInt("Playable Chapter", 1);
-            PlayerPrefs.SetInt("Index Anim Icon Chapter", 1);
             PlayerPrefs.SetInt("Unlock Chapter " + chapterNumber, 0);
         }
-        else
+        if (PlayerPrefs.HasKey("Playable Chapter"))
         {
-            if (PlayerPrefs.GetInt("Playable Chapter") == chapterNumber)
+            if (PlayerPrefs.GetInt("Playable Chapter") >= chapterNumber)
             {
                 if (PlayerPrefs.GetInt("Unlock Chapter " + chapterNumber) == 0)
                 {
@@ -28,6 +26,7 @@ public class ChapterLock : MonoBehaviour
                 }
                 else if (PlayerPrefs.GetInt("Unlock Chapter " + chapterNumber) == 1)
                 {
+                    Debug.Log(2);
                     gameObject.SetActive(false);
                 }
             }

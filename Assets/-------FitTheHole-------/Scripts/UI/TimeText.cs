@@ -27,7 +27,7 @@ public class TimeText : MonoBehaviour
         {
             if (timeLeftToPlay > 0)
             {
-                timeLeftToPlay -= UnityEngine.Time.deltaTime;
+                timeLeftToPlay -= Time.deltaTime;
                 time = TimeSpan.FromSeconds(timeLeftToPlay);
                 timeRemainingText.text = time.ToString(@"mm\:ss");
             }

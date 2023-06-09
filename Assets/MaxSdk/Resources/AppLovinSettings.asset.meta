@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 7814c8908a32de74bb64364e0f00a3a5
+labels:
+- al_max
+- al_max_export_path-MaxSdk/Resources/AppLovinSettings.asset
+- al_max_export_path-MaxSdk\Resources\AppLovinSettings.asset
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

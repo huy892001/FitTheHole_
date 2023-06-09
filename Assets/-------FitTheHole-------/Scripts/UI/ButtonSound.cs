@@ -27,6 +27,7 @@ public class ButtonSound : MonoBehaviour
         buttonSoundOn.SetActive(true);
         buttonSoundOff.SetActive(false);
         PlayerPrefs.SetInt("Button",0);
+        SoundManager.Instance.muteAudioSoureOfFireWork = false;
         SoundManager.Instance.audioSound.mute = false;
     }
     public void SetButtonSoundOff()
@@ -36,5 +37,6 @@ public class ButtonSound : MonoBehaviour
         buttonSoundOff.SetActive(true);
         PlayerPrefs.SetInt("Button", 1);
         SoundManager.Instance.audioSound.mute = true;
+        SoundManager.Instance.muteAudioSoureOfFireWork = true;
     }
 }

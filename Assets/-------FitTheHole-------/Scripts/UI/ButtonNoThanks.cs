@@ -9,6 +9,15 @@ public class ButtonNoThanks : MonoBehaviour
     {
         SoundManager.Instance.PlaySoundButton();
         PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-        SceneManager.LoadSceneAsync("Gameplay");
+        if (PlayerPrefs.GetInt("Level") < 25)
+        {
+            SceneManager.LoadSceneAsync("Gameplay");
+        }
+        else
+        {
+            PlayerPrefs.SetInt("Level", 1);
+            PlayerPrefs.SetInt("Chapter", 1);
+            SceneManager.LoadSceneAsync("Home");            
+        }
     }
 }

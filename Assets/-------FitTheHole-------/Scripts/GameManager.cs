@@ -26,7 +26,7 @@ public class GameManager : Singleton<GameManager>
             PlayerPrefs.SetInt("Level", 1);
             PlayerPrefs.SetInt("Hunter", 1);
         }
-        animationOfHuntCharacter.transform.position = new Vector3(-3,-6,1);
+        animationOfHuntCharacter.transform.position = new Vector3(-2, -6, 1);
         UpdateState(GameState.Start);
     }
     public void UpdateState(GameState newstate)
@@ -39,7 +39,7 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameState.Win:
                 HandleWin();
-                break;          
+                break;
             case GameState.Lose:
                 HandleLose();
                 break;
@@ -55,11 +55,16 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleWin()
     {
+        if (!PlayerPrefs.HasKey("Text Guide Hand"))
+        {
+            PlayerPrefs.SetInt("Text Guide Hand", 0);
+        }
         PlayAnimationHuntCharacterComplete();
     }
 
     private void HandleLose()
     {
+        TextGuidHand.Instance.textTapToChange.SetActive(false);
         PlayAnimationHuntCharacterLose();
     }
     public void PlayAnimationHuntCharacterComplete()

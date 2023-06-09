@@ -1,4 +1,4 @@
-using Spine;
+﻿using Spine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,9 +9,11 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
     void Start()
     {
         GameManager.Instance.animationOfHuntCharacter.AnimationState.Start += HandleEventStart;
-        GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventStop;
+        GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventAngry;
+        GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventStopWhenYouLose;
         GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventRun;
         GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventHit;
+        GameManager.Instance.animationOfHuntCharacter.AnimationState.Event += HandleEventStomping;
         GameManager.Instance.animationOfHuntCharacter.AnimationState.Complete += HandleEventEnd;
     }
 
@@ -23,9 +25,17 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
         }
     }
 
-    void HandleEventStop(TrackEntry trackEntry, Spine.Event e)
+    void HandleEventAngry(TrackEntry trackEntry, Spine.Event e)
     {
-        if (e.Data.Name == "dung" && (trackEntry.Animation.Name == "Win" || trackEntry.Animation.Name == "Lose"))
+        if (e.Data.Name == "het" && (trackEntry.Animation.Name == "Win"))
+        {
+            SoundManager.Instance.PlaySoundHunterAngry();
+        }
+    }
+
+    void HandleEventStopWhenYouLose(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "dung" && (trackEntry.Animation.Name == "Lose" || trackEntry.Animation.Name == "Win"))
         {
             SoundManager.Instance.audioSound.Stop();
         }
@@ -43,6 +53,14 @@ public class EventSoundAnimationOfHunter : MonoBehaviour
         if (e.Data.Name == "dap" && (trackEntry.Animation.Name == "Lose"))
         {
             SoundManager.Instance.audioSound.PlayOneShot(SoundManager.Instance.audioClipAnimationHit);
+        }
+    }
+
+    void HandleEventStomping(TrackEntry trackEntry, Spine.Event e)
+    {
+        if (e.Data.Name == "dam chan" && (trackEntry.Animation.Name == "Win"))
+        {
+            SoundManager.Instance.PlaySoundHunterStomping();
         }
     }
 

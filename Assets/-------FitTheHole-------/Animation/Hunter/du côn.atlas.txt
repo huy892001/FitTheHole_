@@ -4,11 +4,10 @@ filter:Linear,Linear
 pma:true
 scale:0.8
 Ef/Comp 1_00000
-bounds:1920,132,45,33
+bounds:1917,68,45,33
 offsets:95,88,240,200
-rotate:90
 Ef/Comp 1_00002
-bounds:1840,113,78,70
+bounds:1748,13,78,70
 offsets:78,70,240,200
 Ef/Comp 1_00003
 bounds:1609,86,102,94
@@ -66,7 +65,8 @@ Layer 1203
 bounds:837,2,90,129
 rotate:90
 Layer 1210
-bounds:1823,47,74,34
+bounds:1915,103,74,34
+rotate:90
 Layer 1222 copy 3
 bounds:1245,2,90,58
 rotate:90
@@ -93,8 +93,11 @@ dau 2
 bounds:277,189,170,253
 dauu
 bounds:620,191,164,251
+heat
+bounds:1840,103,73,80
+offsets:2,1,77,82
 long may
-bounds:1840,83,75,28
+bounds:1840,73,75,28
 offsets:0,1,76,30
 m1
 bounds:449,191,169,251
@@ -117,7 +120,7 @@ offsets:1,0,43,25
 muii
 bounds:121,2,22,24
 măt 22
-bounds:1823,2,43,46
+bounds:1903,23,43,46
 offsets:1,0,44,46
 rotate:90
 nv chinhs/Layer 1243
@@ -147,7 +150,7 @@ nv chinhs/quan trc
 bounds:949,107,60,168
 rotate:90
 nv chinhs/quan {}
-bounds:1748,34,73,49
+bounds:1828,22,73,49
 offsets:0,0,74,49
 nv chinhs/than
 bounds:1836,185,83,122

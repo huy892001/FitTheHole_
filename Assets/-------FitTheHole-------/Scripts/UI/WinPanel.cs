@@ -9,7 +9,10 @@ public class WinPanel : MonoBehaviour
     [SerializeField] private GameObject iconChapter, backgroundImageOfCompleteChapter;
     private void OnEnable()
     {
-        PlayerPrefs.SetInt("Playable Level",(PlayerPrefs.GetInt("Playable Level") +1));
+        if (PlayerPrefs.GetInt("Level") >= PlayerPrefs.GetInt("Playable Level"))
+        {
+            PlayerPrefs.SetInt("Playable Level", (PlayerPrefs.GetInt("Level") + 1));
+        }
         if (PlayerPrefs.HasKey("Chapter"))
         {
             if (PlayerPrefs.GetInt("Chapter") >= PlayerPrefs.GetInt("Playable Chapter"))
@@ -48,13 +51,19 @@ public class WinPanel : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("Don't find ScriptTableobject");
+                    iconChapter.SetActive(false);
+                    StartCoroutine(WaitEndOfAnimationOfChapter(0));
+                    //Debug.LogError("Don't find ScriptTableobject");                    
                 }
                 float index = iconChapter.transform.GetChild(0).GetComponent<Animation>().GetClip("AnimationIconBackground1").length;
                 StartCoroutine(WaitEndOfAnimationOfChapter(index));
             }
             else
             {
+                if (PlayerPrefs.GetInt("Level") % 6 == 0)
+                {
+                    PlayerPrefs.SetInt("Chapter", PlayerPrefs.GetInt("Chapter") + 1);
+                }
                 iconChapter.SetActive(false);
                 StartCoroutine(WaitEndOfAnimationOfChapter(0));
             }
@@ -72,6 +81,7 @@ public class WinPanel : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
+        gameObject.transform.GetChild(0).gameObject.SetActive(false);
         backgroundImageOfCompleteChapter.SetActive(true);
     }
 }

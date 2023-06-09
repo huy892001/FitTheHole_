@@ -13,8 +13,10 @@ public class SoundManager : Singleton<SoundManager>
     public AudioClip audioClipAnimationRunning,
                                        audioClipAnimationHit,
                                        audioClipWinPanel,
-                                       audioClipLosePanel;
-    [SerializeField] private SoundPlayTime audioOfFirewordsEffectShot, audioOfFirewordsEffectBurst;
+                                       audioClipLosePanel,
+                                       audioClipHunterAngry,
+                                       audioClipHunterStomping;
+    public bool muteAudioSoureOfFireWork = true;
     private void Start()
     {
         if (PlayerPrefs.HasKey("Button"))
@@ -22,20 +24,12 @@ public class SoundManager : Singleton<SoundManager>
             if (PlayerPrefs.GetInt("Button") == 1)
             {
                 audioSound.mute = true;
-                if(audioOfFirewordsEffectShot != null && audioOfFirewordsEffectBurst != null)
-                {
-                    audioOfFirewordsEffectShot.audioSource.mute = true;
-                    audioOfFirewordsEffectBurst.audioSource.mute = true;
-                }
+                muteAudioSoureOfFireWork = true;
             }
             else if (PlayerPrefs.GetInt("Button") == 0)
             {
                 audioSound.mute = false;
-                if (audioOfFirewordsEffectShot != null && audioOfFirewordsEffectBurst != null)
-                {
-                    audioOfFirewordsEffectShot.audioSource.mute = false;
-                    audioOfFirewordsEffectBurst.audioSource.mute = false;
-                }
+                muteAudioSoureOfFireWork = false;
             }
         }
     }
@@ -54,17 +48,25 @@ public class SoundManager : Singleton<SoundManager>
     {
         audioSound.PlayOneShot(audioSoundTextPraise[indexOfAudioTextPraise].audioSoundTextPraise);
     }
+    public void PlaySoundHunterAngry()
+    {
+        audioSound.PlayOneShot(audioClipHunterAngry);
+    }
+    public void PlaySoundHunterStomping()
+    {
+        audioSound.PlayOneShot(audioClipHunterStomping);
+    }
 }
 
-    [Serializable]
-    public class audioSoundTextPraiseOfCharacter
-    {
-        [HorizontalGroup("Background Chapter", 75)]
-        [PreviewField(50)]
-        [HideLabel]
-        public Sprite Icon;
-        [VerticalGroup("Background Chapter/Chapter")]
-        [LabelWidth(100)]
-        public AudioClip audioSoundTextPraise;
-    }
+[Serializable]
+public class audioSoundTextPraiseOfCharacter
+{
+    [HorizontalGroup("Background Chapter", 75)]
+    [PreviewField(50)]
+    [HideLabel]
+    public Sprite Icon;
+    [VerticalGroup("Background Chapter/Chapter")]
+    [LabelWidth(100)]
+    public AudioClip audioSoundTextPraise;
+}
 

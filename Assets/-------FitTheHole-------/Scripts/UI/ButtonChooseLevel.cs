@@ -10,7 +10,6 @@ public class ButtonChooseLevel : MonoBehaviour
     [SerializeField] private TMP_Text textOfLevelNumber;
     private void Start()
     {
-
         if (PlayerPrefs.HasKey("Playable Level"))
         {
             if(int.Parse(textOfLevelNumber.text) <= PlayerPrefs.GetInt("Playable Level"))

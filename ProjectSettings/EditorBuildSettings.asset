@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/-------FitTheHole-------/Scenes/Loading.unity
+    guid: 66c96537aea9a2f4eb263e028787cbb8
+  - enabled: 1
     path: Assets/-------FitTheHole-------/Scenes/Home.unity
     guid: f84491f478c61bf4abf21c3deff54e14
   - enabled: 1
