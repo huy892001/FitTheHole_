@@ -1,14 +1,21 @@
+using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class ButtonPlay : MonoBehaviour
 {
     public void ForwardToSceneGameplay()
     {
         SoundManager.Instance.PlaySoundButton();
-        //LoadingScene.Instance.Show("Gameplay");
-        SceneManager.LoadSceneAsync("Gameplay 1");
+        StartCoroutine(WaitToChangeScene());
+        //SceneManager.LoadSceneAsync("Gameplay 1");
+    }
+    
+    IEnumerator WaitToChangeScene()
+    {
+        ButtonInHome.Instance.MoveButtonToOutScene();
+        yield return new WaitForSeconds(0.7f);
+        TransitionEffect.Instance.Show("Gameplay");
     }
 }

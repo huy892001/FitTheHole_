@@ -7,6 +7,14 @@ public class ButtonSelectLevel : MonoBehaviour
     public void ForwardToSceneSelectLevel()
     {
         SoundManager.Instance.PlaySoundButton();
-        SceneManager.LoadSceneAsync("SelectLevel");
+        StartCoroutine(WaitToChangeScene());
+        //SceneManager.LoadSceneAsync("SelectLevel");
+    }
+
+    IEnumerator WaitToChangeScene()
+    {
+        ButtonInHome.Instance.MoveButtonToOutScene();
+        yield return new WaitForSeconds(0.7f);
+        TransitionEffect.Instance.Show("SelectLevel");
     }
 }
