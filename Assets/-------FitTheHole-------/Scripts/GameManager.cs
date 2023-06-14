@@ -15,13 +15,13 @@ public class GameManager : Singleton<GameManager>
     {
         if (PlayerPrefs.HasKey("Hunter"))
         {
-            Instantiate(Resources.Load<GameObject>("Character/Chapter " + PlayerPrefs.GetInt("Chapter") + "/Level " + PlayerPrefs.GetInt("Level")));
-            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter " + PlayerPrefs.GetInt("Hunter")));
+            //Instantiate(Resources.Load<GameObject>("Character/Chapter " + PlayerPrefs.GetInt("Chapter") + "/Level " + PlayerPrefs.GetInt("Level")));
+            //animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter " + PlayerPrefs.GetInt("Hunter")));
         }
         else
         {
-            Instantiate(Resources.Load<GameObject>("Character/Chapter 1/Level 1"));
-            animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter 1"));
+            //Instantiate(Resources.Load<GameObject>("Character/Chapter 1/Level 1"));
+            //animationOfHuntCharacter = Instantiate(Resources.Load<SkeletonAnimation>("Hunter/Hunter 1"));
             PlayerPrefs.SetInt("Chapter", 1);
             PlayerPrefs.SetInt("Level", 1);
             PlayerPrefs.SetInt("Hunter", 1);

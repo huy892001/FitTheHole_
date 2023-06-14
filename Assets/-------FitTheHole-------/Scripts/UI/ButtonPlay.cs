@@ -8,6 +8,7 @@ public class ButtonPlay : MonoBehaviour
     public void ForwardToSceneGameplay()
     {
         SoundManager.Instance.PlaySoundButton();
-        SceneManager.LoadSceneAsync("Gameplay");
+        //LoadingScene.Instance.Show("Gameplay");
+        SceneManager.LoadSceneAsync("Gameplay 1");
     }
 }
