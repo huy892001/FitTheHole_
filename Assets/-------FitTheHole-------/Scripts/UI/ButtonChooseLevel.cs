@@ -35,6 +35,7 @@ public class ButtonChooseLevel : MonoBehaviour
         SoundManager.Instance.PlaySoundButton();
         PlayerPrefs.SetInt("Level", int.Parse(textOfLevelNumber.text));
         PlayerPrefs.SetInt("Chapter", chapter);
-        SceneManager.LoadSceneAsync("Gameplay");
+        TransitionEffect.Instance.Show("Gameplay");
+        //SceneManager.LoadSceneAsync("Gameplay");
     }
 }

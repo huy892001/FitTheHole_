@@ -130,8 +130,8 @@ public class DataManager : MonoBehaviour
     {
         if (saveData.removeAds)
             return;
-
         DataParam.lastShowInter = System.DateTime.Now;
+
         if ((DataParam.lastShowInter - DataParam.beginShowInter).TotalSeconds > DataParam.timeDelayShowAds)
         {
             if (AdsController.instance != null)

@@ -9,6 +9,8 @@ public class ButtonHome : MonoBehaviour
     {
         Time.timeScale = 1f;
         SoundManager.Instance.PlaySoundButton();
-        SceneManager.LoadSceneAsync("Home");
+        DataManager.instance.ShowInter();
+        TransitionEffect.Instance.Show("Home");
+        //SceneManager.LoadSceneAsync("Home");
     }
 }

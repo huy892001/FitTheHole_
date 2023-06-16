@@ -125,7 +125,7 @@ public class AdsController : MonoBehaviour
     public void InitializeMRecAds()
     {
         // MRECs are sized to 300x250 on phones and tablets
-        MaxSdk.CreateMRec(nativeAdsAndroid, MaxSdkBase.AdViewPosition.CenterLeft);
+        MaxSdk.CreateMRec(nativeAdsAndroid, MaxSdkBase.AdViewPosition.Centered);
 
         MaxSdkCallbacks.MRec.OnAdLoadedEvent += OnMRecAdLoadedEvent;
         MaxSdkCallbacks.MRec.OnAdLoadFailedEvent += OnMRecAdLoadFailedEvent;

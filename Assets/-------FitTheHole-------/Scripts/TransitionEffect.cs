@@ -9,7 +9,7 @@ public class TransitionEffect : Singleton<TransitionEffect>
 {
     [SerializeField] private Image _blackBg;
     private string scenes;
-
+    [SerializeField] private GameObject textLoading;
     [SerializeField] private float _durationOffScreen = 0.7f;
     [SerializeField] private float _durationOnScreen = 0.3f;
 
@@ -54,7 +54,11 @@ public class TransitionEffect : Singleton<TransitionEffect>
     {  
         LoadingAnimOpen();
         Debug.Log("truoc khi delay");
+        textLoading.SetActive(true);
+        textLoading.transform.GetComponent<Animation>().Play();
         yield return new WaitForSeconds(_durationOffScreen);
+
+
         //   anim.Play("IdleLoad");
         /*    AsyncOperation aop = SceneManager.LoadSceneAsync(scenes);
     
@@ -63,17 +67,17 @@ public class TransitionEffect : Singleton<TransitionEffect>
                 yield return null;
             }*/
         //Debug.Log(3);
+
         Debug.Log("bat dau load scene");
-        SceneManager.LoadScene(scenes);
-
-
+        SceneManager.LoadSceneAsync(scenes);
+        
 
         yield return new WaitForSeconds(0.1f);
         //  aop.allowSceneActivation = true;
 #if UNITY_ANDROID
         Resources.UnloadUnusedAssets();
 #endif
-
+        textLoading.SetActive(false);
         LoadingAnimClose();
     }
 }

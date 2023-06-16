@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "108110179445",
+    "firebase_url": "https://ragdoll-epic-hero.firebaseio.com",
+    "project_id": "ragdoll-epic-hero",
+    "storage_bucket": "ragdoll-epic-hero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108110179445:android:a437a4dd7347c2b0651c3c",
+        "android_client_info": {
+          "package_name": "com.fit.hole.pose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "108110179445-9p2n5qn2noo42somfntrov64mav9745i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBum8UzOZYh3nCCCZhjd74nmmiUApaBfTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "108110179445-9p2n5qn2noo42somfntrov64mav9745i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

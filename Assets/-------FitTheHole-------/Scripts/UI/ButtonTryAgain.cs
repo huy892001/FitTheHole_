@@ -8,6 +8,8 @@ public class ButtonTryAgain : MonoBehaviour
     public void HandlerTryAgain()
     {
         SoundManager.Instance.PlaySoundButton();
-        SceneManager.LoadSceneAsync("Gameplay");
+        DataManager.instance.ShowInter();
+        TransitionEffect.Instance.Show("Gameplay");
+        //SceneManager.LoadSceneAsync("Gameplay");
     }
 }

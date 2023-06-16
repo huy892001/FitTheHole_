@@ -9,6 +9,7 @@ public class ButtonPause : MonoBehaviour
     public void OpenThePausePanel()
     {
         SoundManager.Instance.PlaySoundButton();
+        DataManager.instance.ShowInter();
         Time.timeScale = 0;
         pausePanel.SetActive(true);
     }

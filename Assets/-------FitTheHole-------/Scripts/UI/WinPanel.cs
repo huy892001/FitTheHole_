@@ -1,14 +1,22 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class WinPanel : MonoBehaviour
+public class WinPanel : Singleton<WinPanel>
 {
     [SerializeField] private GameObject iconChapter, backgroundImageOfCompleteChapter;
+    [SerializeField] private TMP_Text textOfBonusCoin;
+    private int currentGold;
+    private int bonusGold;
     private void OnEnable()
     {
+        currentGold = PlayerPrefs.GetInt("Coin");
+        AdsController.instance.ShowNativeAds();
+        IncreaseGold();
         if (PlayerPrefs.GetInt("Level") >= PlayerPrefs.GetInt("Playable Level"))
         {
             PlayerPrefs.SetInt("Playable Level", (PlayerPrefs.GetInt("Level") + 1));
@@ -83,5 +91,26 @@ public class WinPanel : MonoBehaviour
         gameObject.transform.GetChild(4).gameObject.SetActive(false);
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         backgroundImageOfCompleteChapter.SetActive(true);
+    }
+    private void IncreaseGold()
+    {
+        bonusGold = UnityEngine.Random.Range(1, 300);
+        int targetGold = currentGold + bonusGold;
+
+        DOTween.To(() => currentGold, x => currentGold = Mathf.RoundToInt(x), targetGold, 3f)
+           .OnUpdate(() =>
+           {
+               textOfBonusCoin.text = currentGold.ToString();
+           })
+            .OnComplete(() =>
+            {
+                textOfBonusCoin.text = targetGold.ToString();
+                PlayerPrefs.SetInt("Coin", targetGold);
+            });
+    }
+
+    public void HandlerX2Coin()
+    {
+        IncreaseGold();
     }
 }
