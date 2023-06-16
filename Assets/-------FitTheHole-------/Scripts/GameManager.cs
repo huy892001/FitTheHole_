@@ -34,6 +34,9 @@ public class GameManager : Singleton<GameManager>
         gameState = newstate;
         switch (newstate)
         {
+            case GameState.Story:
+                HandleStory();
+                break;
             case GameState.Start:
                 HandleStart();
                 break;
@@ -48,6 +51,11 @@ public class GameManager : Singleton<GameManager>
         }
         OnGamestateChanged?.Invoke(newstate);
     }
+
+    private void HandleStory()
+    {
+
+    }
     private void HandleStart()
     {
 
@@ -58,6 +66,10 @@ public class GameManager : Singleton<GameManager>
         if (!PlayerPrefs.HasKey("Text Guide Hand"))
         {
             PlayerPrefs.SetInt("Text Guide Hand", 0);
+        }
+        if (!PlayerPrefs.HasKey("Page Story"))
+        {
+            PlayerPrefs.SetInt("Page Story", 0);
         }
         PlayAnimationHuntCharacterComplete();
     }
@@ -81,6 +93,7 @@ public class GameManager : Singleton<GameManager>
 
 public enum GameState
 {
+    Story,
     Start,
     Win,
     Lose

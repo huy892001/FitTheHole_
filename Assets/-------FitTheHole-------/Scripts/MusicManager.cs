@@ -7,6 +7,11 @@ public class MusicManager : Singleton<MusicManager>
     public AudioSource audioMusic;
     private void Start()
     {
+        SetMuteOnMusicManager();
+    }
+
+    public void SetMuteOnMusicManager()
+    {
         if (PlayerPrefs.HasKey("Music"))
         {
             if (PlayerPrefs.GetInt("Music") == 1)

@@ -19,6 +19,11 @@ public class SoundManager : Singleton<SoundManager>
     public bool muteAudioSoureOfFireWork = true;
     private void Start()
     {
+        SetMuteOnSoundManager();
+    }
+
+    public void SetMuteOnSoundManager()
+    {
         if (PlayerPrefs.HasKey("Button"))
         {
             if (PlayerPrefs.GetInt("Button") == 1)
